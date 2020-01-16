@@ -1,0 +1,34 @@
+<div *ngIf="hasGame">
+  <div class="row">
+    <div class="col-sm-8">
+      <div *ngFor="let items of game.board; index as i;">
+        <div class="row" *ngIf="i%4==0">
+          <div class="col-xs-3 letter-box" *ngFor="let j of [i, i + 1, i + 2, i + 3]">
+            <div class="card" [ngClass]="{'blue': game.board[j].color === 1, 'red': game.board[j].color === 2}">
+              <span class="card-text">{{game.board[j].animal}}</span>
+              <!-- <span>{{animalMap[game.board[j].animal]}}</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4" style="margin-top:40px;">
+      <button (click)="quit()" class="spacy-btn"> Quit </button>
+      <button (click)="handshake()" class="spacy-btn"> HandShake</button>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-12" style="text-align: center;">
+      <button (click)="move()" class="spacy-btn"> Move </button>
+      <button (click)="flip()" class="spacy-btn"> Flip</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!hasGame">
+  <button (click)="getGame()"> Start A Game</button>
+</div>

@@ -1,0 +1,43 @@
+
+
+ <div class="row">
+  <div class="col-sm">
+    ''
+  </div>
+  <div class="col-sm">
+    <div class="md-form input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text md-addon" id="material-addon1">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="material-addon1" [(ngModel)]="username">
+    </div>
+    
+    <div class="md-form input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text md-addon" id="material-addon2">@</span>
+      </div>
+      <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="material-addon2" [(ngModel)]="pass">
+    </div>
+    
+    <div class="md-form input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text md-addon" id="material-addon3">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="material-addon3" [(ngModel)]="email">
+    </div>
+
+    <button mdbBtn type="button" color="default" mdbWavesEffect (click)="signIn()">Sign in</button> 
+    <div style="width: 6px; height: 10px;"></div>
+Or new User, <button class='link-btn' (click)="signUp()"> Sign up </button>
+  </div>
+
+  <div class="col-sm">
+    ''
+  </div>
+
+</div>
+
+
+
+
+
